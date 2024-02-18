@@ -1,6 +1,7 @@
 package boardgame;
 
 public class Position {
+<<<<<<< HEAD
 	
 	private int row;
 	private int collumn;
@@ -30,4 +31,7 @@ public class Position {
 		return row + ", " + collumn;
 	}
 	
+=======
+
+>>>>>>> 348b23ea7fc7e8ef5340f6479371a2d0107acb61
 }
