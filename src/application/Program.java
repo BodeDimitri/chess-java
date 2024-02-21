@@ -1,21 +1,30 @@
 package application;
 
-<<<<<<< HEAD
+
+import java.util.Scanner;
+
 import chess.ChessMatch;
+import chess.ChessPiece;
+import chess.ChessPosition;
 
 public class Program {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
 		ChessMatch ch = new ChessMatch();
-		UI.printBoard(ch.getPieces());
-=======
-public class Program {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
->>>>>>> 348b23ea7fc7e8ef5340f6479371a2d0107acb61
-
+		
+		while(true) {
+			UI.printBoard(ch.getPieces());
+			System.out.println("");
+			System.out.print("Source: ");
+			ChessPosition source = UI.readChessPosition(sc);
+			
+			System.out.println("");
+			System.out.print("Target: ");
+			ChessPosition target = UI.readChessPosition(sc);
+			
+			ChessPiece capturedPiece = ch.performChessMove(source, target);
+		}
 	}
-
 }
